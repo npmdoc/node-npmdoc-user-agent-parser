@@ -1,1 +1,39 @@
-{     "devDependencies": {         "user-agent-parser": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-user-agent-parser",     "homepage": "https://github.com/npmdoc/node-npmdoc-user-agent-parser",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-user-agent-parser.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [user-agent-parser (v0.6.0)](http://github.com/faisalman/ua-parser-js)  [![npm package](https://img.shields.io/npm/v/npmdoc-user-agent-parser.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-user-agent-parser) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-user-agent-parser.svg)](https://travis-ci.org/npmdoc/node-npmdoc-user-agent-parser)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "user-agent-parser": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-user-agent-parser",
+    "keywords": [
+        "documentation",
+        "user-agent-parser"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_user_agent_parser.js",
+    "name": "npmdoc-user-agent-parser",
+    "nameAlias": "npmdoc_user_agent_parser",
+    "nameOriginal": "npmdoc-user-agent-parser",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-user-agent-parser.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.2"
+}
